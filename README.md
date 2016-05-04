@@ -1,10 +1,8 @@
-# power-bi-embedded-iframe
+---
+services: power-bi-embedded
+platforms: dotnet
+author: dvana
+---
+# Power BI Embedded - Embed Power BI with an IFrame
+
 This sample shows you essential C# code to use the Power BI Embedded API to integrate a report into a web app.
-## Running this sample
-Coming soon...
-## Deploy this sample to Azure
-Coming soon...
-## About the code
-Coming soon...
-## More information
-Coming soon...
