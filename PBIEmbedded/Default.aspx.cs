@@ -3,6 +3,7 @@ using System;
 using System.Web.UI;
 using Newtonsoft.Json;
 using PBIWebApp.Properties;
+using Microsoft.PowerBI.Security;
 
 namespace PBIEmbedded
 {
@@ -22,18 +23,8 @@ namespace PBIEmbedded
         /// </summary>
         protected void getReportsButton_Click(object sender, EventArgs e)
         {
-
-            //Get an app token to generate a JSON Web Token (JWT). An app token flow is a claims-based design pattern.
-            //To learn how you can code an app token flow to generate a JWT, see the PowerBIToken class.
-            var appToken = PowerBIToken.CreateDevToken(workspaceName, workspaceId);
-
-            //After you get a PowerBIToken which has Claims including your WorkspaceName and WorkspaceID,
-            //you generate JSON Web Token (JWT) . The Generate() method uses classes from System.IdentityModel.Tokens: SigningCredentials, 
-            //JwtSecurityToken, and JwtSecurityTokenHandler. 
-            string jwt = appToken.Generate(accessKey);
-
             //Set app token textbox to JWT string to show that the JWT was generated
-            appTokenTextbox.Text = jwt;
+            appTokenTextbox.Text = accessKey;
 
             //Construct reports uri resource string
             var uri = String.Format("https://api.powerbi.com/beta/collections/{0}/workspaces/{1}/reports", workspaceName, workspaceId);
@@ -45,7 +36,7 @@ namespace PBIEmbedded
 
             //Set the WebRequest header to AppToken, and jwt
             //Note the use of AppToken instead of Bearer
-            request.Headers.Add("Authorization", String.Format("AppToken {0}", jwt));
+            request.Headers.Add("Authorization", String.Format("AppKey {0}", accessKey));
 
             //Get reports response from request.GetResponse()
             using (var response = request.GetResponse() as System.Net.HttpWebResponse)
