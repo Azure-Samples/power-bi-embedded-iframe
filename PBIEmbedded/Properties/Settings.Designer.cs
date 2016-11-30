@@ -25,8 +25,7 @@ namespace PBIWebApp.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("N/ogPqcaSa+Wq5HVx8ThQOb7AAYfVYjZo3ZUkGSAfY/7bscRH2kWElcRSSTZUNBAaFgn0XzBUafDT9u5L" +
-            "NzFMA==")]
+        [global::System.Configuration.DefaultSettingValueAttribute("your access key here")]
         public string AccessKey {
             get {
                 return ((string)(this["AccessKey"]));
@@ -35,7 +34,7 @@ namespace PBIWebApp.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("DerrickV-ARM-Test2")]
+        [global::System.Configuration.DefaultSettingValueAttribute("your Workspace Collection Name here")]
         public string WorkspaceName {
             get {
                 return ((string)(this["WorkspaceName"]));
@@ -44,7 +43,7 @@ namespace PBIWebApp.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("a7322bb9-96dd-43a5-a2a1-092d62e1dc54")]
+        [global::System.Configuration.DefaultSettingValueAttribute("your Workspace Id here")]
         public string WorkspaceId {
             get {
                 return ((string)(this["WorkspaceId"]));
